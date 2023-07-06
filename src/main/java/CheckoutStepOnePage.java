@@ -20,6 +20,10 @@ public class CheckoutStepOnePage extends BasePage{
     @FindBy(id = "finish")
     WebElement finish;
 
+    @FindBy(css = ".error h3")
+    WebElement errorMessage;
+
+
     @FindBy(className = "complete-header")
     WebElement getText;
 
