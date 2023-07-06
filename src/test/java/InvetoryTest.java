@@ -83,6 +83,20 @@ public class InvetoryTest extends BaseTest{
 
     }
 
+    @Test
+    public void BuyProductsToThe()
+    {
+        inventoryPage.clickLight();
+        inventoryPage.clickBackpack();
+        inventoryPage.clickCart();
+        cartPage.clickCheckout();
+        checkoutStepOnePage.setForm("","","");
+        checkoutStepOnePage.clickFinish();
+
+        Assert.assertEquals(checkoutStepOnePage.getMessage(),"Thank you for your order!");
+
+    }
+
     @AfterMethod
     public void after()
     {
